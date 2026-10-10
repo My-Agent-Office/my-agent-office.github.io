@@ -1,7 +1,6 @@
 # My Agent Office — 릴리스
 
 맥에서 돌고 있는 Claude Code · Codex 세션을 픽셀아트 사무실로 보여 주는 앱의 **설치 파일만** 두는 공개 저장소다.
-코드는 비공개 저장소(`My-Agent-Officer/my-agent-office`)에 있다.
 
 ## 설치
 

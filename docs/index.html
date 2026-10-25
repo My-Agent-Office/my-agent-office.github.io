@@ -36,7 +36,7 @@ a{color:inherit;text-decoration:none}
 .hdr{position:sticky;top:0;z-index:20;background:var(--panel);border-bottom:2px solid var(--line)}
 .hdr .wrap{display:flex;align-items:center;gap:8px;height:52px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;margin-right:auto;white-space:nowrap}
-.brand i{width:12px;height:12px;background:var(--work);box-shadow:0 0 0 2px #1d6f58 inset}
+.brand img{width:32px;height:32px;image-rendering:pixelated;flex:none}
 .hb{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border:2px solid var(--line);background:var(--bg);color:var(--text);font:13px var(--font);white-space:nowrap}
 .hb:hover{border-color:var(--muted)}
 .hb svg{width:12px;height:12px;shape-rendering:crispEdges}
@@ -182,7 +182,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <header class="hdr">
   <div class="wrap">
-    <a class="brand" href="#"><i></i>My Agent Office</a>
+    <a class="brand" href="#"><img src="favicon-32.png" alt="" width="32" height="32">My Agent Office</a>
     <a class="hb" href="#desks"><svg viewBox="0 0 9 9"><path fill="currentColor" d="M0 2h9v4H0zM1 6h1v3H1zM7 6h1v3H7z"/></svg><span class="t">Office</span></a>
     <a class="hb" href="#team"><svg viewBox="0 0 9 9"><path fill="currentColor" d="M1 0h3v3H1zM5 0h3v3H5zM0 4h5v5H0zM5 4h4v5H5z"/></svg><span class="t">Team</span></a>
     <a class="hb" href="#meeting"><svg viewBox="0 0 9 9"><path fill="currentColor" d="M0 0h9v6H0zM4 6h1v2H4zM2 8h5v1H2z"/></svg><span class="t">Meeting</span></a>

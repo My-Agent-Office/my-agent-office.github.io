@@ -17,7 +17,7 @@
 @font-face{font-family:Galmuri11;font-weight:700;src:url(fonts/Galmuri11-Bold.woff2) format("woff2");font-display:swap}
 :root{
   color-scheme:dark;
-  /* 앱 색 (src/style.css, src/office-draw.js) */
+  /* 앱 색 */
   --bg:#15171f; --panel:#1d202a; --line:#2b2f3c; --text:#dfe3ec; --muted:#838c9e;
   --work:#3fd0a0; --wait:#e8c45c; --idle:#7f8ca0; --stall:#d05a4a;
   --cap:#5c5466; --capLit:#7d7494; --face:#4a4256; --faceLit:#6a617e; --foot:#2b2735;
@@ -60,7 +60,7 @@ a{color:inherit;text-decoration:none}
 .sign p{color:var(--muted);margin:0 auto 26px;max-width:620px;font-size:16px}
 .sign .req{display:block;margin-top:12px;font-size:12px;color:var(--muted)}
 .office-wrap{display:flex;justify-content:center;overflow:hidden;max-width:1180px;margin:0 auto}
-.office-wrap canvas{cursor:pointer}
+.office-wrap video{display:block;width:100%;max-width:1118px;height:auto;image-rendering:pixelated}
 .legend{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 20px;padding:14px 0 0;font-size:12px;color:var(--muted)}
 .legend span::before{content:"";display:inline-block;width:8px;height:8px;margin-right:6px;background:var(--c)}
 
@@ -201,7 +201,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <a class="btn" href="https://github.com/my-agent-office/my-agent-office.github.io/releases/latest">무료 다운로드</a>
     <span class="req">macOS 12+ · Apple 칩</span>
   </div>
-  <div class="office-wrap"><canvas id="office" aria-label="에이전트들이 일하는 픽셀 사무실 (움직이는 그림)"></canvas></div>
+  <div class="office-wrap"><video poster="img/office-poster.png" autoplay muted loop playsinline width="1180" height="760" aria-label="에이전트들이 일하는 픽셀 사무실 (움직이는 그림)"><source src="img/office.mp4" type="video/mp4"><source src="img/office.webm" type="video/webm"></video></div>
   <div class="legend">
     <span style="--c:var(--work)">작업 중</span><span style="--c:var(--wait)">답변 대기</span><span style="--c:var(--idle)">쉬는 중</span><span style="--c:var(--stall)">멈춤</span>
   </div>
@@ -211,7 +211,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="how">
     <div><b>1</b><span>내려받아 열기</span></div>
     <div><b>2</b><span>내 Claude Code · Codex 세션이 바로 책상에</span></div>
-    <div><b>3</b><span>방장이 사무실을 만들고 참가자를 부르면 한 사무실</span></div>
+    <div><b>3</b><span>혼자 쓰거나, 팀 사무실을 만들어 참가자 부르기</span></div>
   </div>
   <p class="how-sub">설정 없음 · API 키 없음 · 추가 비용 없음</p>
 </div>
@@ -373,9 +373,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <span class="yes">세션 제목 (끌 수 있음)</span><span class="no">전체 경로</span>
         <span class="yes">출근 · 퇴근 시각</span><span class="no">다른 앱 · 화면</span>
       </div>
-      <p class="foot">혼자 쓰면 아무것도 나가지 않습니다.</p>
+      <p class="foot">혼자 쓰면 작업 내용은 아무것도 나가지 않습니다.</p>
     </div>
-    <div class="notes"><span class="note">곧 나와요 · 1인 사무실</span></div>
+    <div class="feat">
+      <div class="mon"><img class="zoom" src="img/solo.png" alt="혼자 쓰는 1인 사무실" loading="lazy"></div>
+      <div>
+        <div class="h3">혼자 쓰기 · 1인 사무실</div>
+        <ul class="can">
+          <li>로그인하면 기다리지 않고 바로 내 사무실</li>
+          <li>세션 현황 · 근무 기록은 내 맥에만</li>
+          <li>회의실 · 휴게공간도 혼자 쓰는 크기로</li>
+        </ul>
+      </div>
+    </div>
     <div class="label">PRIVACY</div>
   </div>
 </section>
@@ -415,12 +425,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <div id="lb"><img alt=""></div>
 
-<script src="js/sprites.js"></script>
-<script src="js/wood.js"></script>
-<script src="js/zone.js"></script>
-<script src="js/office-draw.js"></script>
 <script src="js/i18n.js"></script>
-<script src="js/live.js"></script>
 <script>
 // 바닥 무늬: 앱 drawCarpet / drawTiles 와 같은 색·방식
 (function () {

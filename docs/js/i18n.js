@@ -99,6 +99,13 @@
     "처음엔 책상만 있는 빈 사무실": "You start with an empty office with just desks",
     "업적과 일하며 모은 코인을 사무실 금고에 함께": "Coins from achievements and work go into the office safe together",
     "회의실 · 탕비실 · 게시판 · 고양이 · 오락기 게임이 하나씩 열려요": "Meeting rooms, the break room, the board, the cat and arcade games open one by one",
+    "혼자 쓰거나, 팀 사무실을 만들어 참가자 부르기": "Use it alone, or make a team office and invite members",
+    "혼자 쓰면 작업 내용은 아무것도 나가지 않습니다.": "Used alone, none of your work leaves your Mac.",
+    "혼자 쓰는 1인 사무실": "A solo office for one person",
+    "혼자 쓰기 · 1인 사무실": "Solo office",
+    "로그인하면 기다리지 않고 바로 내 사무실": "Sign in and your office is ready, no waiting",
+    "세션 현황 · 근무 기록은 내 맥에만": "Session status and work logs stay on your Mac",
+    "회의실 · 휴게공간도 혼자 쓰는 크기로": "A meeting room and break area sized for one",
     // 그림 설명 (alt · aria-label)
     '에이전트들이 일하는 픽셀 사무실 (움직이는 그림)': 'A pixel office with agents at work (animated)',
     '책상 상세 창': 'Desk detail window', '소품을 올린 내 책상': 'A desk with props on it', '소품 가게': 'Prop shop',

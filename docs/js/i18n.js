@@ -58,9 +58,9 @@
     '출근하기': 'Clock in',
     '최신 버전 받기 (.dmg)': 'Get the latest version (.dmg)',
     'dmg를 열고 앱을 응용 프로그램 폴더로 끌어 놓기': 'Open the dmg and drag the app into Applications',
-    '처음 열 때 “확인되지 않은 개발자” 경고가 뜨면<br>시스템 설정 → 개인정보 보호 및 보안 → <b>그래도 열기</b>':
-      'If the first launch warns about an unidentified developer,<br>go to System Settings → Privacy &amp; Security → <b>Open Anyway</b>',
-    '또는 터미널에서 <code>xattr -cr "/Applications/My Agent Office.app"</code>': 'Or run <code>xattr -cr "/Applications/My Agent Office.app"</code> in Terminal',
+    '처음 열 때 “확인할 수 없음” 창이 뜨면 완료 →<br>시스템 설정 → 개인정보 보호 및 보안 → <b>그래도 열기</b>':
+      'If the first launch says Apple could not verify the app, click Done,<br>then System Settings → Privacy &amp; Security → <b>Open Anyway</b>',
+    '그래도 안 열리면 터미널에서 <code>xattr -cr "/Applications/My Agent Office.app"</code>': 'Still blocked? Run <code>xattr -cr "/Applications/My Agent Office.app"</code> in Terminal',
     'My Agent Office · 무료 · macOS': 'My Agent Office · Free · macOS',
     'GitHub 릴리스': 'GitHub releases',
     '내려받아 열기': "Download and open",

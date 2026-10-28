@@ -157,6 +157,23 @@ a{color:inherit;text-decoration:none}
 .feat.wide .can{grid-template-columns:1fr 1fr}
 @media (max-width:820px){.feat.wide .can{grid-template-columns:1fr}}
 
+/* 같이 쓰는 툴 */
+.tools-sub{color:#e9e1d3;margin:-16px 0 28px;font-size:15px;text-shadow:1px 1px 0 rgba(0,0,0,.4)}
+.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.tl{background:rgba(21,23,31,.86);border:2px solid var(--line);padding:16px 18px;box-shadow:6px 6px 0 rgba(0,0,0,.28);display:flex;flex-direction:column}
+.tl .nm{margin:0 0 12px;font-size:16px}
+.tl ul{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:6px;font-size:14px;flex:1;align-content:start}
+.tl li{padding-left:14px;position:relative}
+.tl li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:2px;background:var(--muted)}
+.tl .fit-for{background:#f6e27a;color:#3a3218;padding:8px 12px;font-size:13px;font-weight:700;box-shadow:3px 3px 0 rgba(0,0,0,.3)}
+.tl .fit-for small{display:block;font-size:11px;font-weight:400;opacity:.75}
+.combo{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.combo div{background:var(--panel);border:2px solid var(--line);padding:12px 14px;font-size:14px}
+.combo b{display:block;color:#fff;margin-bottom:4px}
+.combo span{color:var(--work)}
+@media (max-width:980px){.tools{grid-template-columns:repeat(2,minmax(0,1fr))}.combo{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.tools,.combo{grid-template-columns:1fr}}
+
 /* 포스트잇 */
 .note{display:inline-block;background:#f6e27a;color:#3a3218;padding:14px 18px 16px;font:700 15px var(--font);transform:rotate(-2deg);box-shadow:4px 4px 0 rgba(0,0,0,.3);position:relative}
 .note::before{content:"";position:absolute;top:-6px;left:50%;width:12px;height:12px;margin-left:-6px;background:#e2574c;box-shadow:0 0 0 2px #7a3128 inset}
@@ -185,6 +202,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <a class="brand" href="#"><img src="favicon-32.png" alt="" width="32" height="32">My Agent Office</a>
     <a class="hb" href="#desks"><svg viewBox="0 0 9 9"><path fill="currentColor" d="M0 2h9v4H0zM1 6h1v3H1zM7 6h1v3H7z"/></svg><span class="t">Office</span></a>
     <a class="hb" href="#team"><svg viewBox="0 0 9 9"><path fill="currentColor" d="M1 0h3v3H1zM5 0h3v3H5zM0 4h5v5H0zM5 4h4v5H5z"/></svg><span class="t">Team</span></a>
+    <a class="hb" href="#tools"><svg viewBox="0 0 9 9"><path fill="currentColor" d="M1 0h3v3H1zM5 1h3v1H5zM0 4h4v1H0zM5 3h1v6H5zM1 5h2v4H1zM7 5h2v4H7z"/></svg><span class="t">Tools</span></a>
     <a class="hb" href="#meeting"><svg viewBox="0 0 9 9"><path fill="currentColor" d="M0 0h9v6H0zM4 6h1v2H4zM2 8h5v1H2z"/></svg><span class="t">Meeting</span></a>
     <a class="hb" href="#privacy"><svg viewBox="0 0 9 9"><path fill="currentColor" d="M2 0h5v1H2zM1 1h1v3H1zM7 1h1v3H7zM0 4h9v5H0z"/></svg><span class="t">Privacy</span></a>
     <button class="hb lang" id="lang" type="button" aria-label="View in English">EN</button>
@@ -304,6 +322,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
     </div>
     <div class="label">TEAM</div>
+  </div>
+</section>
+
+<section class="room" id="tools">
+  <div class="wall"><div class="windows"><i></i><i></i><i></i><i></i></div></div>
+  <div class="floor carpet" data-floor="carpet">
+    <div class="h2">쓰던 툴 그대로 연결돼요</div>
+    <p class="tools-sub">켜 둔 툴만 사무실에 보여요.</p>
+    <div class="tools">
+      <div class="tl"><div class="nm" style="--c:#d97757">Claude Code</div><ul><li>세션 하나가 책상 하나, 상태가 바로 보여요</li><li>터미널 · VS Code · Cursor 어디서 띄워도 그대로</li></ul><div class="fit-for"><small>이런 팀에 잘 맞아요</small><span>에이전트 세션을 여러 개 동시에 돌리는 개발자</span></div></div>
+      <div class="tl"><div class="nm" style="--c:#8fa8ff">Codex</div><ul><li>Claude Code 옆 책상에 같이 앉아요</li><li>설정에서 툴마다 보여 줄지 켜고 끄기</li></ul><div class="fit-for"><small>이런 팀에 잘 맞아요</small><span>Claude Code와 Codex를 섞어 쓰는 팀</span></div></div>
+      <div class="tl"><div class="nm" style="--c:#a259ff">Figma</div><ul><li>Figma에서 작업 중이면 옆에 Figma 책상</li><li>브라우저 Figma도 켜서 쓸 수 있어요</li><li>접근 키를 넣으면 오늘 저장한 파일 이름까지</li></ul><div class="fit-for"><small>이런 팀에 잘 맞아요</small><span>디자이너와 개발자가 한 사무실에 있는 팀</span></div></div>
+      <div class="tl"><div class="nm" style="--c:#e9e5dc">Notion</div><ul><li>스크럼보드의 진행 중 티켓이 담당자 책상 위에</li><li>업무 일지로 쓰면 그날 할 일 진행이 숫자로</li><li>방장이 한 번 연결하면 팀 전체에</li></ul><div class="fit-for"><small>이런 팀에 잘 맞아요</small><span>Notion으로 스프린트 · 티켓을 관리하는 팀</span></div></div>
+      <div class="tl"><div class="nm" style="--c:#8b949e">GitHub</div><ul><li>책상에서 브랜치 · PR 번호가 보여요</li><li>이번 주 머지한 PR만큼 팀 화분이 자라요</li><li>GitHub 계정으로 로그인 (없으면 Google)</li></ul><div class="fit-for"><small>이런 팀에 잘 맞아요</small><span>회사 GitHub 조직에서 PR로 일하는 팀</span></div></div>
+      <div class="tl"><div class="nm" style="--c:#3fd0a0">터미널 · 에디터</div><ul><li>책상에서 "세션으로 이동"을 누르면 그 창이 앞으로</li><li>iTerm2 · 터미널은 그 탭까지, VS Code · Cursor는 그 폴더 창</li></ul><div class="fit-for"><small>이런 팀에 잘 맞아요</small><span>창 여러 개에 세션을 흩어 두고 쓰는 사람</span></div></div>
+    </div>
+    <div class="h3" style="margin-top:48px">우리 팀엔 이 조합</div>
+    <div class="combo">
+      <div><b>혼자 개발</b><span>Claude Code · Codex</span></div>
+      <div><b>개발팀</b><span>+ GitHub</span></div>
+      <div><b>디자이너가 있는 팀</b><span>+ Figma</span></div>
+      <div><b>스프린트로 일하는 팀</b><span>+ Notion</span></div>
+    </div>
+    <div class="label">TOOLS</div>
   </div>
 </section>
 

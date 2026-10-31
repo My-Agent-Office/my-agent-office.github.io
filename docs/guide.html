@@ -181,6 +181,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .ghero{padding:44px 0 36px;background:linear-gradient(#11131b,var(--bg));text-align:center}
 .ghero h1{font-size:clamp(28px,4.6vw,44px);line-height:1.3;margin:0 0 10px;text-shadow:4px 4px 0 #000}
 .ghero p{color:var(--muted);margin:0}
+.ghero .ver{font-size:12px;margin-top:8px;opacity:.8}
 .guide{display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px;align-items:start}
 .gnav{position:sticky;top:76px;display:grid;gap:8px}
 .gnav button{font:700 14px var(--font);text-align:left;background:#1b1d26;color:var(--muted);border:2px solid #2b2f3c;padding:9px 12px;cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:4px 4px 0 rgba(0,0,0,.28)}
@@ -242,6 +243,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <h1>사용 설명서</h1>
     <p>사무실을 더 잘 쓰는 법</p>
+    <p class="ver">v3.35.0 기준</p>
   </div>
 </div>
 
@@ -314,6 +316,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
             <li>서브에이전트마다 맡은 일 · 걸린 시간 · 만든 파일</li>
             <li>에이전트가 만든 파일 열기, 세션이 띄운 localhost 열기</li>
             <li>책상 모니터에서 바로 터미널, 세션 <b>이어서 하기</b></li>
+            <li>터미널은 작게 · 기본 · 크게 세 가지 크기로</li>
             <li>결과물을 팀에 공개하거나 게시판에 올리기</li>
           </ul>
         </div>
@@ -326,15 +329,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li>개인 용무 세션은 책상 우클릭 → <b>이 자리 숨기기</b> (팀에도 안 보여요)</li>
           <li>다시 보이게 하려면 설정 → 화면 → 숨긴 자리</li>
           <li><span class="kbd">People</span> 을 누르면 사람마다 한 줄로 책상을 늘어놓고 봐요</li>
+          <li>ChatGPT 맥 앱 · 브라우저도 책상으로 (설정에서 켜기)</li>
         </ul>
       </div>
       <div class="blk two">
         <div>
           <div class="h3">내 자리 꾸미기</div>
           <ul class="can">
-            <li>소품 가게에서 산 소품을 끌어서 책상 위 원하는 자리에</li>
-            <li>책상에 안 올린 소품 · 훈장 · 스티커는 <span class="kbd">Items</span> 서랍에</li>
-            <li><span class="kbd">Status</span> 로 내 캐릭터 머리 위에 한마디</li>
+            <li>상점에서 산 소품을 끌어서 책상 위 원하는 자리에</li>
+            <li>장패드를 고르고, 상점의 큰 장패드면 소품을 더 많이</li>
+            <li>책상에 안 올린 소품 · 훈장 · 스티커는 <span class="kbd">Items</span> 서랍에, 서랍 아래 상점 버튼</li>
+            <li>스티키 노트를 붙이면 내 책상에 메모 목록</li>
+            <li><span class="kbd">Status</span> 로 내 캐릭터 머리 위에 한마디, 오늘 컨디션 얼굴</li>
             <li>자리를 비울 땐 출입구 발판을 눌러 외출 표시</li>
           </ul>
         </div>
@@ -354,6 +360,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="h3">같이 일하기</div>
           <ul class="can">
             <li><span class="kbd">Chat</span> 으로 1:1 대화, 회의실 · 탕비실로 부르기</li>
+            <li>공개 · 비공개 채널, 파일 올리기, 말풍선에 이모지 리액션</li>
             <li>동료 책상에 칭찬 스티커 붙이기</li>
             <li>팀이 여럿이면 방이 나뉘고, 설정에서 우리 팀 방만 보기</li>
             <li>맨 위 한 줄로 누가 출근 · 퇴근했는지</li>
@@ -362,6 +369,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div>
           <div class="h3">게시판</div>
           <ul class="can">
+            <li>큰 코르크판에 메모지를 끌어 원하는 자리에 (내 화면에만)</li>
+            <li>옆 칸 버튼으로 예전처럼 오른쪽 칸에서 보기</li>
             <li>공지 · 사진(여러 장) · 투표 글</li>
             <li>댓글과 리액션, 새 글은 맥 알림으로</li>
             <li>책상의 결과물을 그대로 올려 공유</li>
@@ -370,10 +379,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
       <div class="blk two">
         <div>
+          <div class="h3">팀 캘린더</div>
+          <ul class="can">
+            <li>벽 일력을 누르면 이번 주 · 이번 달 팀 일정</li>
+            <li>방장이 연결하면 구글 · 노션 일정도 같이</li>
+            <li>시작 10분 전 알림</li>
+          </ul>
+        </div>
+        <div class="mon fit shot"><img class="zoom" src="img/calendar.png" alt="팀 캘린더 이번 주 보기" loading="lazy"></div>
+      </div>
+      <div class="blk two">
+        <div>
           <div class="h3">근무 기록</div>
           <ul class="can">
             <li><span class="kbd">Log</span>: 사람별 출퇴근 · 작업 시간을 날짜별로</li>
-            <li>퇴근할 때 남긴 쪽지와 그날 한 일도 함께</li>
+            <li>퇴근할 때 남긴 쪽지와 그날 한 일도 함께 (회의 · 노션 티켓 · 끝낸 메모)</li>
+            <li>출근 시간을 정해 두면 늦은 날 책상에 빨간 벌금 딱지</li>
+            <li>딱지를 눌러 내기 전엔 상점 · 아케이드 · 크레인을 못 써요</li>
+            <li>달이 바뀌면 지난달 결산</li>
           </ul>
         </div>
         <div>
@@ -399,14 +422,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
             <li>말하는 사람의 채팅은 자막으로</li>
             <li><b>받아 적기</b>를 켜면 말을 글로 남기고, 끝나면 내 Claude Code · Codex 가 요약</li>
             <li>앱 없는 사람은 게스트 링크로 브라우저에서 참여</li>
+            <li>📋 안건 목록을 적고 하나씩 끝내기, 🎲 로 한 명 · 순서 뽑기</li>
+            <li>캘린더에서 회의실 일정으로 잡으면 미리 팻말, 일정 제목이 주제로</li>
           </ul>
         </div>
         <div>
           <div class="h3">보드 · 플래닝 포커</div>
           <ul class="can">
-            <li>포스트잇으로 아이디어 모으고 끌어서 묶기</li>
+            <li>포스트잇으로 아이디어 모으고 끌어서 묶기, 사진도 붙이기</li>
             <li>플래닝 포커: 각자 카드를 고르고 한꺼번에 공개</li>
-            <li>회의 주제 · 참가자 · 정한 점수는 회의 기록에</li>
+            <li>회의 주제 · 참가자 · 안건 · 정한 점수는 회의 기록에</li>
           </ul>
         </div>
       </div>
@@ -418,20 +443,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <p class="lead">쉬는 시간엔 탕비실로. 사무실 금고로 열 수 있어요.</p>
       <div class="blk two">
         <div>
-          <div class="h3" style="--c:#e2574c">오락기</div>
+          <div class="h3" style="--c:#e2574c">아케이드</div>
           <ul class="can">
             <li>코인 하나로 한 판, 둘이 같이 하는 게임도</li>
             <li>게임마다 사무실 순위표</li>
           </ul>
         </div>
-        <div class="mon fit shot sm"><img class="zoom" src="img/07.png" alt="오락기" loading="lazy"></div>
+        <div class="mon fit shot sm"><img class="zoom" src="img/07.png" alt="아케이드" loading="lazy"></div>
       </div>
       <div class="blk two">
         <div>
           <div class="h3" style="--c:#f29bb0">크레인</div>
           <ul class="can">
             <li>캡슐을 집어 서랍에 모으기</li>
-            <li>시즌마다 상품이 바뀌어요</li>
+            <li>시즌마다 상품이 바뀌고, 끝나면 시즌 결과판</li>
             <li>가끔 기계가 들뜨는 시간이 있어요</li>
           </ul>
         </div>
@@ -483,9 +508,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div>
           <div class="h3">코인 쓰는 곳</div>
           <ul class="can">
-            <li>오락기 한 판 · 크레인</li>
-            <li>소품 가게의 소품과 특별 소품</li>
+            <li>아케이드 한 판 · 크레인</li>
+            <li>상점의 소품과 특별 소품</li>
             <li>사무실 금고에 모아 회의실 · 탕비실 · 게시판 열기</li>
+            <li>다 연 금고는 벌금통: 벌금 · 기부가 모이고 방장이 보너스로</li>
           </ul>
         </div>
         <div>
@@ -534,7 +560,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="h3">방장 탭</div>
           <ul class="can">
             <li>참가자 · 팀 나누기, 사무실 이름</li>
-            <li>코인 지갑 크기, Notion 연결</li>
+            <li>코인 지갑 크기, Notion · 캘린더 연결</li>
+            <li>출퇴근 시간 · 지각 벌금, 회의 지각, 근무 기록 공개</li>
             <li>방장에게만 보여요</li>
           </ul>
         </div>
@@ -613,7 +640,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     '화분에 무언가 열리면 눌러 보기',
     '동료에게 칭찬 스티커를 받을 때',
     '고양이가 고마운 사람에게 남기는 것',
-    '오락기에서 동료의 1등 기록을 깨면',
+    '아케이드에서 동료의 1등 기록을 깨면',
     '새 달이 시작될 때 1등 자리를 지키고 있다면',
     '운세를 뽑다 보면 가끔',
     '책상 기능을 쓰다 보면 가끔',

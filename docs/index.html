@@ -48,6 +48,7 @@ a{color:inherit;text-decoration:none}
 .btn{display:inline-block;position:relative;font:700 18px var(--font);padding:14px 26px;background:var(--work);color:#15171f;
   box-shadow:0 -4px 0 0 #1d6f58 inset, 0 0 0 4px #15171f, 0 6px 0 4px #0b0c11;margin:4px}
 .btn:hover{background:#5fe0b6}
+.btn .beta{position:absolute;top:-14px;right:-12px;font:700 12px var(--font);padding:3px 7px;background:#f2c14e;color:#15171f;box-shadow:0 0 0 3px #15171f;transform:rotate(6deg);letter-spacing:1px;pointer-events:none}
 .btn:active{transform:translateY(3px);box-shadow:0 -2px 0 0 #1d6f58 inset,0 0 0 4px #15171f,0 3px 0 4px #0b0c11}
 
 /* 첫 화면: 바깥 하늘 + 간판 */
@@ -213,11 +214,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <main>
 <div class="hero">
   <div class="wrap sign">
-    <span class="tag"><b></b>macOS · Claude Code · Codex</span>
+    <span class="tag"><b></b>macOS · Windows 베타 · Claude Code · Codex</span>
     <h1>팀이 같이 쓰는<br><em>AI 에이전트</em> 사무실</h1>
     <p>내 맥의 Claude Code · Codex 세션이 픽셀 사무실의 사람이 됩니다.</p>
     <a class="btn" href="https://github.com/my-agent-office/my-agent-office.github.io/releases/latest">무료 다운로드</a>
-    <span class="req">macOS 12+ · Apple 칩</span>
+    <span class="req">macOS 12+ · Apple 칩 · Windows 10+ (베타)</span>
   </div>
   <div class="office-wrap"><video poster="img/office-poster.png" autoplay muted loop playsinline width="1180" height="760" aria-label="에이전트들이 일하는 픽셀 사무실 (움직이는 그림)"><source src="img/office.mp4" type="video/mp4"><source src="img/office.webm" type="video/webm"></video></div>
   <div class="legend">
@@ -265,16 +266,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="h3">내 책상 꾸미기</div>
         <ul class="can">
           <li>소품을 사서 책상 위 원하는 자리에</li>
+          <li>장패드도 골라서 깔고, 큰 장패드는 상점에서</li>
           <li>꾸민 책상은 팀원들에게도 그대로 보여요</li>
         </ul>
       </div>
     </div>
 
     <div class="feat">
-      <div class="mon fit"><img class="zoom" src="img/05.png" alt="사무실 게시판" loading="lazy"></div>
+      <div class="mon fit"><img class="zoom" src="img/board.png" alt="메모지가 붙은 큰 코르크 게시판" loading="lazy"></div>
       <div>
         <div class="h3">사무실 게시판</div>
         <ul class="can">
+          <li>큰 코르크판에 메모지를 끌어 원하는 자리에</li>
           <li>공지 · 사진 · 투표, 댓글과 리액션</li>
           <li>책상의 결과물을 그대로 올려 공유</li>
         </ul>
@@ -296,6 +299,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li>다른 도시, 다른 나라에 있어도 팀원 세션이 내 사무실 책상에</li>
           <li>팀마다 방이 나뉘고, 우리 팀 방만 따로 볼 수도</li>
           <li>사무실 채팅, 회의실 · 탕비실로 부르기</li>
+          <li>채널을 나눠 대화하고, 파일 올리기 · 이모지 리액션</li>
           <li>누가 출근했고 누가 퇴근했는지 맨 위 한 줄로</li>
         </ul>
       </div>
@@ -312,12 +316,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
     </div>
     <div class="feat">
+      <div class="mon fit"><img class="zoom" src="img/calendar.png" alt="팀 캘린더 이번 주 보기" loading="lazy"></div>
+      <div>
+        <div class="h3">팀 캘린더</div>
+        <ul class="can">
+          <li>벽 일력을 누르면 팀 일정이 한눈에</li>
+          <li>구글 · 노션 일정도 같이 보고, 시작 전에 알림</li>
+          <li>회의실 일정이면 미리 팻말이 뜨고, 일정 제목이 회의 주제로</li>
+        </ul>
+      </div>
+    </div>
+    <div class="feat rev">
       <div class="mon fit"><img class="zoom" src="img/records.png" alt="근무 기록 창" loading="lazy"></div>
       <div>
         <div class="h3">출퇴근 · 근무 기록</div>
         <ul class="can">
           <li>출근 · 퇴근은 버튼 한 번</li>
           <li>사람별 출퇴근 · 작업 시간을 날짜별로</li>
+          <li>출근 시간을 정해 두면, 늦은 사람 책상에 빨간 벌금 딱지</li>
         </ul>
       </div>
     </div>
@@ -367,9 +383,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <li>화면 공유, 말하는 사람 채팅은 자막으로</li>
         <li>말을 받아 적고 내 Claude Code · Codex로 요약</li>
         <li>앱 없는 사람도 링크로 브라우저에서 참여</li>
+        <li>안건 목록을 하나씩 끝내고, 주사위로 발표 순서 뽑기</li>
       </ul>
       <ul class="can" data-tab="1" hidden>
-        <li>포스트잇으로 아이디어 모으기</li>
+        <li>포스트잇으로 아이디어 모으기, 사진도 붙여요</li>
         <li>끌어서 묶고, 같은 내용은 겹쳐서 정리</li>
         <li>모두의 화면에 바로 같이 보여요</li>
       </ul>
@@ -397,7 +414,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <ul class="can grow-can">
       <li>처음엔 책상만 있는 빈 사무실</li>
       <li>업적과 일하며 모은 코인을 사무실 금고에 함께</li>
-      <li>회의실 · 탕비실 · 게시판 · 고양이 · 오락기 게임이 하나씩 열려요</li>
+      <li>회의실 · 탕비실 · 게시판 · 고양이 · 아케이드 게임이 하나씩 열려요</li>
     </ul>
     <div class="label">LEVEL UP</div>
   </div>
@@ -437,7 +454,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="floor pantry small" data-floor="pantry">
     <div class="h2">쉬는 시간은 탕비실에서</div>
     <div class="strip">
-      <div><div class="nm" style="--c:#e2574c">오락기</div><div class="mon"><img class="zoom" src="img/07.png" alt="오락기" loading="lazy"></div></div>
+      <div><div class="nm" style="--c:#e2574c">아케이드</div><div class="mon"><img class="zoom" src="img/07.png" alt="아케이드" loading="lazy"></div></div>
       <div><div class="nm" style="--c:#f29bb0">크레인</div><div class="mon"><img class="zoom" src="img/08.png" alt="크레인" loading="lazy"></div></div>
       <div><div class="nm" style="--c:#c8a8f0">럭키박스</div><div class="mon"><img class="zoom" src="img/13.png" alt="럭키박스" loading="lazy"></div></div>
     </div>
@@ -449,11 +466,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wall"></div>
   <div class="floor carpet dl" data-floor="carpet">
     <div class="h2">출근하기</div>
-    <a class="btn" href="https://github.com/my-agent-office/my-agent-office.github.io/releases/latest">최신 버전 받기 (.dmg)</a>
+    <a class="btn" href="https://github.com/my-agent-office/my-agent-office.github.io/releases/latest">macOS 받기 (.dmg)</a>
+    <a class="btn" style="margin-left:12px" href="https://github.com/my-agent-office/my-agent-office.github.io/releases/latest">Windows 받기 (.exe)<span class="beta">BETA</span></a>
     <ol class="steps">
       <li><b class="n">1</b><span>dmg를 열고 앱을 응용 프로그램 폴더로 끌어 놓기</span></li>
       <li><b class="n">2</b><span>처음 열 때 “확인할 수 없음” 창이 뜨면 완료 →<br>시스템 설정 → 개인정보 보호 및 보안 → <b>그래도 열기</b></span></li>
       <li><b class="n">3</b><span>그래도 안 열리면 터미널에서 <code>xattr -cr "/Applications/My Agent Office.app"</code></span></li>
+      <li><b class="n">W</b><span>Windows 베타: exe를 실행하고 “Windows의 PC 보호” 창이 뜨면 <b>추가 정보 → 실행</b></span></li>
     </ol>
     <div class="label">LOBBY</div>
   </div>
@@ -462,7 +481,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </main>
 
 <footer>
-  <div class="wrap"><span>My Agent Office · 무료 · macOS</span><span><a href="guide.html">사용 설명서</a> · <a href="https://github.com/my-agent-office/my-agent-office.github.io/releases">GitHub 릴리스</a></span></div>
+  <div class="wrap"><span>My Agent Office · 무료 · macOS · Windows 베타 · v3.35.0 기준</span><span><a href="guide.html">사용 설명서</a> · <a href="https://github.com/my-agent-office/my-agent-office.github.io/releases">GitHub 릴리스</a></span></div>
 </footer>
 
 <div id="lb"><img alt=""></div>
